@@ -206,20 +206,24 @@
     }
     .btn-primary:hover { background:var(--gold2); border-color:var(--gold2); transform:translateY(-2px); box-shadow:0 8px 30px rgba(201,168,76,.3); }
     .btn-outline {
-      background:transparent; color:var(--white); font-weight:600;
+      background:rgba(13,31,20,.28); color:var(--white); font-weight:600;
       font-size:13px; letter-spacing:2px; text-transform:uppercase;
-      padding:15px 38px; border-radius:2px; border:1px solid rgba(255,255,255,.3);
+      padding:15px 38px; border-radius:2px; border:1px solid rgba(255,255,255,.45);
       cursor:pointer; transition:all .25s;
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+      text-shadow:0 1px 6px rgba(0,0,0,.5);
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
     }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); background:rgba(13,31,20,.4); }
 
     .hero-trust {
       display:flex; flex-wrap:wrap; gap:24px; justify-content:center;
       margin-top:56px; animation: fadeUp .8s ease .65s both;
     }
     .trust-item { display:flex; align-items:center; gap:8px; }
-    .trust-icon { font-size:18px; }
-    .trust-label { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.55); }
+    .trust-icon { font-size:21px; color:var(--gold2); }
+    .trust-icon svg.icon { filter:drop-shadow(0 1px 4px rgba(0,0,0,.6)); }
+    .trust-label { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--white); text-shadow:0 1px 5px rgba(0,0,0,.6), 0 1px 2px rgba(0,0,0,.4); }
 
     @keyframes fadeUp { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:none;} }
 
@@ -382,7 +386,7 @@
     .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:3px; }
     .why-item { padding:36px 28px; border-top:2px solid rgba(201,168,76,.2); background:rgba(255,255,255,.03); transition:background .3s, border-color .3s; }
     .why-item:hover { background:rgba(255,255,255,.07); border-top-color:var(--gold); }
-    .why-icon { font-size:30px; margin-bottom:16px; }
+    .why-icon { font-size:30px; margin-bottom:16px; color:var(--gold2); }
     .why-title { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--white); margin-bottom:10px; }
     .why-desc { font-size:14px; line-height:1.7; color:rgba(255,255,255,.55); }
 
