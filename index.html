@@ -163,10 +163,14 @@
       text-align: center;
     }
 
-    /* Full-size hero photo — DESKTOP version */
+    /* Full-size hero photo — DESKTOP version.
+       Starts below the fixed navbar height (~72px) so the person's head,
+       which sits very close to the top edge of the source photo, is never
+       covered by or cropped under the nav. The reserved strip shows the
+       hero's own dark background, which blends seamlessly with the navbar. */
     .hero-bg {
-      position: absolute; inset: 0;
-      background: url('portada_desktop.jpg') center center / cover no-repeat;
+      position: absolute; top: 72px; left: 0; right: 0; bottom: 0;
+      background: url('portada_desktop.jpg') center top / cover no-repeat;
       z-index: 0;
     }
 
